@@ -57,6 +57,12 @@ function App() {
       {loading && <p>Loading...</p>}
 
       {error && <p className="error">{error}</p>}
+        {!movie && !error && !loading && (
+      <div className="initial-image">
+        <img width={200} src="pop.jpg" alt="Movie Search" />
+        <p>Search for a movie to see its details</p>
+      </div>
+    )}
 
       {movie && <Movie movie={movie} />}
       <Footer/>
